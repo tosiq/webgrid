@@ -1,0 +1,23 @@
+﻿@model WebApplication9.Models.login
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.LabelFor(a => a.id)<br />
+    @Html.TextBoxFor(a => a.id, new { @class = "form-control", required = "required" })<br />
+
+    @Html.LabelFor(a => a.name)<br />
+    @Html.TextBoxFor(a => a.name, new { @class = "form-control", required = "required" })<br />
+
+
+    @Html.LabelFor(a => a.password)<br />
+    @Html.TextBoxFor(a => a.password, new { @class = "form-control", required = "required" })<br />
+
+
+    <button class="btn btn-info" value="register" name="reg">Register</button>
+
+}
